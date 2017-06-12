@@ -15,7 +15,7 @@ import ie.cit.larkin.jpa.domain.Artist;
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes=LarkinJpaApplication.class)
 @SpringBootTest
-public class TestArtistRepository {
+public class ArtistRepositoryTests {
 
 	@Autowired
 	ArtistRepository artistRepository;
