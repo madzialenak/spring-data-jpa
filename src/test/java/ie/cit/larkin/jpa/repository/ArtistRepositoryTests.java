@@ -30,4 +30,13 @@ public class ArtistRepositoryTests {
 		Artist artist = artistRepository.get(1);
 		assertEquals("Chadwick, Lynn", artist.getName());
 	}
+	
+	@Test
+	public void save() {
+		Artist artist = artistRepository.get(2);
+		artist.setGender("male");
+		artistRepository.save(artist);
+		artist = artistRepository.get(2);
+		assertEquals("male", artist.getGender());
+	}
 }
