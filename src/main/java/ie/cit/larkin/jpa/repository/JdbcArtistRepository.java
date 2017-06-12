@@ -4,10 +4,12 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import ie.cit.larkin.jpa.domain.Artist;
 import ie.cit.larkin.jpa.rowmapper.ArtistRowMapper;
 
+@Repository
 public class JdbcArtistRepository implements ArtistRepository {
 
 	private JdbcTemplate jdbcTemplate;

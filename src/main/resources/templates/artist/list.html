@@ -1,0 +1,32 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+  <head>
+    <title>Artists</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  </head>
+
+  <body>
+  
+    <h2>A list of all artists:</h2>
+    
+    <table>
+    
+    <tr>
+    	<th>id</th>
+    	<th>Name</th>
+    	<th>Gender</th>
+    </tr>
+    
+    <tr th:each="artist : ${artists}">
+    	<td th:text="${artist.id}">0</td>
+    	<td th:text="${artist.name}">Unknown Name</td>
+    	<td th:text="${artist.gender}">Male/Female</td>
+    </tr>
+    </table>
+  
+  </body>
+
+</html>
