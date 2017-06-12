@@ -27,7 +27,7 @@ public class ArtistRepositoryTests {
 
 	@Test
 	public void get() {
-		Artist artist = artistRepository.get(2);   // deliberately broken
+		Artist artist = artistRepository.get(1);   // deliberately broken
 		assertEquals("Chadwick, Lynn", artist.getName());
 	}
 	
