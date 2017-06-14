@@ -39,4 +39,14 @@ public class ArtistRepositoryTests {
 		artist = artistRepository.get(2);
 		assertEquals("male", artist.getGender());
 	}
+	
+	@Test
+	public void add() { 
+		Artist artist2 = new Artist();
+		artist2.setName("O'Brien, John");
+		artist2.setGender("male");
+		artistRepository.save(artist2);
+		artist2 = artistRepository.get(6);
+		assertEquals("male", artist2.getGender());
+	}
 }
